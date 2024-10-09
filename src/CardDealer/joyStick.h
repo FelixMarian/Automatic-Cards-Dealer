@@ -14,7 +14,7 @@ public:
     // Set the reference voltage to Arduino's (5V)
     ADMUX |= (1 << REFS0);
 
-    // Enable the ADC and start conversion with a 1024 prescaler to achieve a 125KHz clock.
+    // Enable the ADC and start conversion with a 128 prescaler to achieve a 125KHz clock.
     ADCSRA |= (1 << ADEN) | (1 << ADSC) | (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0);
   }
   uint16_t readADC(uint8_t channel) {
